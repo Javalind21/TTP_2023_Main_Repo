@@ -1,5 +1,6 @@
-// import React, { useEffect } from "react";
-// const [characters, setCharacters] = useState([]);
+//  import React, { useEffect } from "react";
+// import axios from "axios";
+//  //const [characters, setCharacters] = useState([]);
 
 // function StarWarsCharacters() {
 //     useEffect(() => {
