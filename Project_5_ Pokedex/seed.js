@@ -7,9 +7,9 @@ const seed = async () => {
   const charmander = await Pokemon.create({name: "Charmander", type: "Fire"});
   const bulbasaur = await Pokemon.create({name: "Bulbasaur", type: "Grass"});
   // create some trainers
-
-
   
+
+
   db.close();
   console.log(`
     Seeding successful! Pokedex is ready.
