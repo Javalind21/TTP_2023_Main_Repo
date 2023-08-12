@@ -1,7 +1,5 @@
 "use strict";
-
 const { db, Sequelize } = require("./db");
-
 // Require your models and make your associations
 const School = db.define("School", {
   name: {
@@ -12,7 +10,7 @@ const School = db.define("School", {
     },
   },
   imageUrl: {
-    type: sequelize.STRING,
+    type: Sequelize.STRING,
   },
   location: {
     type: Sequelize.STRING,
@@ -24,9 +22,7 @@ const School = db.define("School", {
   description: {
     type: Sequelize.TEXT,
   },
-  
 });
-
 const Student = db.define("Student", {
   firstName: {
     type: Sequelize.STRING,
@@ -43,7 +39,7 @@ const Student = db.define("Student", {
     },
   },
   team: {
-    type: DataTypes.STRING,
+    type: Sequelize.STRING,
     allowNull: false,
     validate: {
       notEmpty: true,
@@ -68,8 +64,10 @@ const Student = db.define("Student", {
     },
   },
 });
-
-
+// changed
+School.hasMany(Student);
+Student.belongsTo(School);
+//
 module.exports = {
   db, School, Student
-};
+}

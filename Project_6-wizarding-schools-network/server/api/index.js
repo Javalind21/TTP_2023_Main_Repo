@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 // require your database and place your routes here
-const {Student, School} = require("../index");
+const {Student, School} = require("../db/index");
 
 router.get("/School", async (req, res, next) => {
     try {
