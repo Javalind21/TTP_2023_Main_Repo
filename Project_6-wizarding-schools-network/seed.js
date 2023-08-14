@@ -3,6 +3,7 @@ const { green, red } = require("chalk");
 
 // require your models here
 const {Campuses, Students}= require("./server/db");
+
 // DUMMY CAMPUS DATA
 
 const campuses = [
