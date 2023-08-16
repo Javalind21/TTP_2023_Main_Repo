@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Task() {
+    const [tasks, setTasks] = useState([]);
+
+    useEffect(() =>{
+        async function getTasks(){
+            const response = await axios.get("https://dummyjson.com/todos");
+            const tasks = await response.json();
+            setTasks(tasks.results);
+        }
+        getTasks();
+
+    }, [])
+
+
   return (
-    <div>
-    <div className="todo list">
-      <h1> Todo List </h1>
-      <form>
-        <h2>
-        <label>
-          What needs to be done today
-        </label>
-        </h2>
-        <input 
-          type="text"
-          id="new-todo-item"
-          name="todo-list-item"
-        />
-        <button type="submit">Add</button>
-      </form>
-    </div>
-    <h2>  Tasks </h2>
-   <ul className="task-list">
-   </ul>
-    </div>
+    <ul>
+      {tasks.map(({ task }) => (
+       <div>
+       <h2>Task</h2>
+       <div>
+        <ul>
+            <li className="taskId">{task.id}</li>
+            <li className="todo">{task.todo}</li>
+            <li>{task.completed}</li>
+            <li>{task.userId}</li>
+        </ul>
+       </div>
+       </div>
+      ))}
+    </ul>
   );
+    
 }
 
 export default Task;
