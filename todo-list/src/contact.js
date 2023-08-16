@@ -1,7 +1,7 @@
 import React from "react";
 
-function Home() {
-  return <h1>Welcome! Todo List App</h1>;
+function contact() {
+  return <h1>Conact</h1>;
 }
 
-export default Home;
+export default contact;
