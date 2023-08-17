@@ -16,6 +16,7 @@ function App() {
           <Route path="/task" element={<Task />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <br></br><br></br>
         <Footer />
       </div>
     </Router>
