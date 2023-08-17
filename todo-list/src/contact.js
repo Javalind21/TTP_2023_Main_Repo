@@ -13,6 +13,7 @@ function contact() {
       <br></br>
       <div className="description">
       <h2>Description</h2>
+      <p>Hello my name is Javaughn Lindsay. I'm a junior at John Jay College.  </p>
       </div>
       </>
   );

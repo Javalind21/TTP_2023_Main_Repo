@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="nav">
       <Link to="/" className="navItem1">Home</Link>
       <Link to="/task" className="navItem2">Task</Link>
-      <Link to="/contact" className="navItem3">Conact</Link>
+      <Link to="/contact" className="navItem3">Contact</Link>
     </div>
     <hr />
   </>
