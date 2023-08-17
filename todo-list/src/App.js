@@ -32,11 +32,13 @@ function SingleTask() {
   }, [taskId]);
 
   return (
+    <div>
     <ul>
-      <h1>Task</h1>
+      <h1>Task {task.id}</h1>
       <p>{task.todo}</p>
-      <p>{task.completed.toString()}</p>
+      <p>{task.completed}</p>
     </ul>
+    </div>
   );
 }
 

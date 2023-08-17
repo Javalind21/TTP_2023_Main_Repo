@@ -17,10 +17,9 @@ function Task() {
     <ul>
       {tasks.map((task) => (
         <div key={task.id}>
-          <h2>Task</h2>
+          <h2>Task {task.id}</h2>
           <div>
             <ul>
-              <li className="taskId">{task.id}</li>
               <li className="todo">{task.todo}</li>
               <li>{task.completed.toString()}</li>
             </ul>
