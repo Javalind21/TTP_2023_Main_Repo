@@ -6,7 +6,7 @@ function SingleTask() {
 
     useEffect(() => {
        async function getSingleTask() {
-        const response = await axios.get(`https://dummyjson.com/todos/`);
+        const response = await axios.get(`https://dummyjson.com/todos`);
         const singleTask = await response;
         setSingleTasks(singleTask.data.todo);
        }
